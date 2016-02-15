@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		465CF44B56BFC01286806FB5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D772A9AE4031069C9963B1D4 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A0D71F101C71C01C005C6F1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D71F0F1C71C01C005C6F1C /* AppDelegate.swift */; };
 		A0D71F121C71C01C005C6F1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D71F111C71C01C005C6F1C /* ViewController.swift */; };
 		A0D71F151C71C01C005C6F1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D71F131C71C01C005C6F1C /* Main.storyboard */; };
 		A0D71F171C71C01C005C6F1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D71F161C71C01C005C6F1C /* Assets.xcassets */; };
 		A0D71F1A1C71C01C005C6F1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D71F181C71C01C005C6F1C /* LaunchScreen.storyboard */; };
+		A0D71F2B1C71DCB0005C6F1C /* adventurers.json in Resources */ = {isa = PBXBuildFile; fileRef = A0D71F2A1C71DCB0005C6F1C /* adventurers.json */; };
+		A0D71F311C71E8E2005C6F1C /* Adventurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D71F301C71E8E2005C6F1C /* Adventurer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05E0B276ECEBBCFC67214505 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		52161771DEA7F19CA05B1FCF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A0D71F0C1C71C01C005C6F1C /* JSONMagic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONMagic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D71F0F1C71C01C005C6F1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0D71F111C71C01C005C6F1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,10 @@
 		A0D71F161C71C01C005C6F1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0D71F191C71C01C005C6F1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0D71F1B1C71C01C005C6F1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0D71F2A1C71DCB0005C6F1C /* adventurers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = adventurers.json; path = Resources/adventurers.json; sourceTree = "<group>"; };
+		A0D71F2F1C71E461005C6F1C /* JSONMagic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSONMagic-Bridging-Header.h"; sourceTree = "<group>"; };
+		A0D71F301C71E8E2005C6F1C /* Adventurer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Adventurer.swift; path = Model/Adventurer.swift; sourceTree = "<group>"; };
+		D772A9AE4031069C9963B1D4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +38,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				465CF44B56BFC01286806FB5 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		97495DF95AD3E73EBB9C6605 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D772A9AE4031069C9963B1D4 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A0D71F031C71C01C005C6F1C = {
 			isa = PBXGroup;
 			children = (
 				A0D71F0E1C71C01C005C6F1C /* JSONMagic */,
 				A0D71F0D1C71C01C005C6F1C /* Products */,
+				F97EC0F8235354CB5A687618 /* Pods */,
+				97495DF95AD3E73EBB9C6605 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +74,42 @@
 		A0D71F0E1C71C01C005C6F1C /* JSONMagic */ = {
 			isa = PBXGroup;
 			children = (
+				A0D71F2C1C71E206005C6F1C /* Model */,
+				A0D71F271C71DAF5005C6F1C /* Resources */,
 				A0D71F0F1C71C01C005C6F1C /* AppDelegate.swift */,
 				A0D71F111C71C01C005C6F1C /* ViewController.swift */,
+				A0D71F2F1C71E461005C6F1C /* JSONMagic-Bridging-Header.h */,
 				A0D71F131C71C01C005C6F1C /* Main.storyboard */,
 				A0D71F161C71C01C005C6F1C /* Assets.xcassets */,
 				A0D71F181C71C01C005C6F1C /* LaunchScreen.storyboard */,
 				A0D71F1B1C71C01C005C6F1C /* Info.plist */,
 			);
 			path = JSONMagic;
+			sourceTree = "<group>";
+		};
+		A0D71F271C71DAF5005C6F1C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A0D71F2A1C71DCB0005C6F1C /* adventurers.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A0D71F2C1C71E206005C6F1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A0D71F301C71E8E2005C6F1C /* Adventurer.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F97EC0F8235354CB5A687618 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52161771DEA7F19CA05B1FCF /* Pods.debug.xcconfig */,
+				05E0B276ECEBBCFC67214505 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +119,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0D71F1E1C71C01C005C6F1C /* Build configuration list for PBXNativeTarget "JSONMagic" */;
 			buildPhases = (
+				FA79565B8FF9208A836768EC /* Check Pods Manifest.lock */,
 				A0D71F081C71C01C005C6F1C /* Sources */,
 				A0D71F091C71C01C005C6F1C /* Frameworks */,
 				A0D71F0A1C71C01C005C6F1C /* Resources */,
+				141B8B5495AE8DA13BAD87FB /* Embed Pods Frameworks */,
+				FEB42EA3FFC7C380B2043E8D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,6 +173,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0D71F2B1C71DCB0005C6F1C /* adventurers.json in Resources */,
 				A0D71F1A1C71C01C005C6F1C /* LaunchScreen.storyboard in Resources */,
 				A0D71F171C71C01C005C6F1C /* Assets.xcassets in Resources */,
 				A0D71F151C71C01C005C6F1C /* Main.storyboard in Resources */,
@@ -130,11 +182,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		141B8B5495AE8DA13BAD87FB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA79565B8FF9208A836768EC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FEB42EA3FFC7C380B2043E8D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A0D71F081C71C01C005C6F1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0D71F311C71E8E2005C6F1C /* Adventurer.swift in Sources */,
 				A0D71F121C71C01C005C6F1C /* ViewController.swift in Sources */,
 				A0D71F101C71C01C005C6F1C /* AppDelegate.swift in Sources */,
 			);
@@ -247,6 +348,7 @@
 		};
 		A0D71F1F1C71C01C005C6F1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52161771DEA7F19CA05B1FCF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JSONMagic/Info.plist;
@@ -254,11 +356,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = alysenko.JSONMagic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JSONMagic/JSONMagic-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		A0D71F201C71C01C005C6F1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05E0B276ECEBBCFC67214505 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JSONMagic/Info.plist;
@@ -266,6 +370,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = alysenko.JSONMagic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JSONMagic/JSONMagic-Bridging-Header.h";
 			};
 			name = Release;
 		};

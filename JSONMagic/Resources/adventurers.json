@@ -1,0 +1,21 @@
+{
+    "adventurers" : [
+                     {
+                     "id" : 1,
+                     "first_name" : "Killi",
+                     "beard_color" : "white"
+                     "shoe_size" : 43
+                     },
+                     {
+                     "id" : 2,
+                     "first_name" : "Filli",
+                     "beard_color" : "green"
+                     "shoe_size" : 42
+                     },
+                     {
+                     "id" : 3,
+                     "first_name" : "Bilbo"
+                     "last_name" : "Baggins"
+                     }
+                     ]
+}
