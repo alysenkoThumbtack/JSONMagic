@@ -14,6 +14,11 @@ class Adventurer : Mappable {
     var firstName: String!
     var lastName: String?
     
+    var birthday: NSDate?
+    
+    var beardColor: UIColor?
+    var shoeSize: NSInteger?
+    
     //MARK: - Mappable protocol methods
     
     required init?(_ map: Map) {
@@ -24,5 +29,34 @@ class Adventurer : Mappable {
         id <- map["id"]
         firstName <- map["first_name"]
         lastName <- map["last_name"]
+        
+        shoeSize <- map["shoe_size"]
+        
+        parseBirthday(map)
+        parseBeardColor(map)
+    }
+    
+    //MARK: -
+    
+    private func parseBirthday(map: Map) {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        birthday <- (map["memorable_days.birthday"], DateFormatterTransform(dateFormatter: dateFormatter))
+    }
+    
+    private func parseBeardColor(map: Map) {
+        let colorTransform = TransformOf<UIColor, String>(fromJSON: { (value: String?) -> UIColor? in
+            if let hex = value {
+                return UIColor(hex: hex)
+            }
+            return nil
+            }, toJSON: { (value: UIColor?) -> String? in
+                if let color = value {
+                    return color.toHexString()
+                }
+                return nil
+        })
+        
+        beardColor <- (map["beard_color"], colorTransform)
     }
 }
