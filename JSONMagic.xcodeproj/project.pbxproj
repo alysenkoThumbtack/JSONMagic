@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		465CF44B56BFC01286806FB5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D772A9AE4031069C9963B1D4 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A09E0DD01C7303300004923A /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E0DCF1C7303300004923A /* Party.swift */; };
 		A0D71F101C71C01C005C6F1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D71F0F1C71C01C005C6F1C /* AppDelegate.swift */; };
 		A0D71F121C71C01C005C6F1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D71F111C71C01C005C6F1C /* ViewController.swift */; };
 		A0D71F151C71C01C005C6F1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D71F131C71C01C005C6F1C /* Main.storyboard */; };
 		A0D71F171C71C01C005C6F1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D71F161C71C01C005C6F1C /* Assets.xcassets */; };
 		A0D71F1A1C71C01C005C6F1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D71F181C71C01C005C6F1C /* LaunchScreen.storyboard */; };
-		A0D71F2B1C71DCB0005C6F1C /* adventurers.json in Resources */ = {isa = PBXBuildFile; fileRef = A0D71F2A1C71DCB0005C6F1C /* adventurers.json */; };
+		A0D71F2B1C71DCB0005C6F1C /* party.json in Resources */ = {isa = PBXBuildFile; fileRef = A0D71F2A1C71DCB0005C6F1C /* party.json */; };
 		A0D71F311C71E8E2005C6F1C /* Adventurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D71F301C71E8E2005C6F1C /* Adventurer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05E0B276ECEBBCFC67214505 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		52161771DEA7F19CA05B1FCF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A09E0DCF1C7303300004923A /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Party.swift; path = Model/Party.swift; sourceTree = "<group>"; };
 		A0D71F0C1C71C01C005C6F1C /* JSONMagic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONMagic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D71F0F1C71C01C005C6F1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0D71F111C71C01C005C6F1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,7 +29,7 @@
 		A0D71F161C71C01C005C6F1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0D71F191C71C01C005C6F1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0D71F1B1C71C01C005C6F1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0D71F2A1C71DCB0005C6F1C /* adventurers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = adventurers.json; path = Resources/adventurers.json; sourceTree = "<group>"; };
+		A0D71F2A1C71DCB0005C6F1C /* party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = party.json; path = Resources/party.json; sourceTree = "<group>"; };
 		A0D71F2F1C71E461005C6F1C /* JSONMagic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JSONMagic-Bridging-Header.h"; sourceTree = "<group>"; };
 		A0D71F301C71E8E2005C6F1C /* Adventurer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Adventurer.swift; path = Model/Adventurer.swift; sourceTree = "<group>"; };
 		D772A9AE4031069C9963B1D4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +92,7 @@
 		A0D71F271C71DAF5005C6F1C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A0D71F2A1C71DCB0005C6F1C /* adventurers.json */,
+				A0D71F2A1C71DCB0005C6F1C /* party.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -98,6 +100,7 @@
 		A0D71F2C1C71E206005C6F1C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A09E0DCF1C7303300004923A /* Party.swift */,
 				A0D71F301C71E8E2005C6F1C /* Adventurer.swift */,
 			);
 			name = Model;
@@ -173,7 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0D71F2B1C71DCB0005C6F1C /* adventurers.json in Resources */,
+				A0D71F2B1C71DCB0005C6F1C /* party.json in Resources */,
 				A0D71F1A1C71C01C005C6F1C /* LaunchScreen.storyboard in Resources */,
 				A0D71F171C71C01C005C6F1C /* Assets.xcassets in Resources */,
 				A0D71F151C71C01C005C6F1C /* Main.storyboard in Resources */,
@@ -237,6 +240,7 @@
 			files = (
 				A0D71F311C71E8E2005C6F1C /* Adventurer.swift in Sources */,
 				A0D71F121C71C01C005C6F1C /* ViewController.swift in Sources */,
+				A09E0DD01C7303300004923A /* Party.swift in Sources */,
 				A0D71F101C71C01C005C6F1C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
