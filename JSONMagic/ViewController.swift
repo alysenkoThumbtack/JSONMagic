@@ -18,6 +18,11 @@ class ViewController: UIViewController {
             let party = Mapper<Party>().map(JSONString)
             print(party)
         }
+        
+        if let JSONString = loadJSON("search.json") {
+            let searchResults = Mapper<SearchResults>().map(JSONString)
+            print(searchResults)
+        }
     }
 
     override func didReceiveMemoryWarning() {
