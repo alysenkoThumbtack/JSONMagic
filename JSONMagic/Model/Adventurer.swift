@@ -13,10 +13,6 @@ class Adventurer : Mappable {
     var id: NSInteger!
     var firstName: String!
     var lastName: String?
-    var race: String?
-    
-    var beardColor: UIColor? //optional
-    var shoeSize: NSInteger? //optional
     
     //MARK: - Mappable protocol methods
     
@@ -26,7 +22,7 @@ class Adventurer : Mappable {
     
     func mapping(map: Map) {
         id <- map["id"]
-        firstName <- map["name"]
-        shoeSize <- map["shoe_size"]
+        firstName <- map["first_name"]
+        lastName <- map["last_name"]
     }
 }
