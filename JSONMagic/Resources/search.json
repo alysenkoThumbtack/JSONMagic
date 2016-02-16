@@ -1,0 +1,50 @@
+{
+    "search_results" : [
+                        {
+                        "type" : "category",
+                        "data" : {
+                        "name" : "Middle-Earth"
+                        }
+                        },
+                        
+                        {
+                        "type" : "adventurer",
+                        "data" : {
+                        "id" : 3,
+                        "first_name" : "Bilbo",
+                        "last_name" : "Baggins",
+                        "memorable_days" : {
+                        "birthday" : "2890-09-22"
+                        }
+                        }
+                        },
+                        
+                        {
+                        "type" : "party",
+                        "data" : {
+                        "adventurers" : [
+                                         {
+                                         "id" : 1,
+                                         "first_name" : "Killi",
+                                         "beard_color" : "#f7f7f7",
+                                         "shoe_size" : 43
+                                         },
+                                         {
+                                         "id" : 2,
+                                         "first_name" : "Filli",
+                                         "beard_color" : "#cccccc",
+                                         "shoe_size" : 42
+                                         },
+                                         {
+                                         "id" : 3,
+                                         "first_name" : "Bilbo",
+                                         "last_name" : "Baggins",
+                                         "memorable_days" : {
+                                         "birthday" : "2890-09-22"
+                                         }
+                                         }
+                                         ]
+                        }
+                        }
+                        ]
+}
