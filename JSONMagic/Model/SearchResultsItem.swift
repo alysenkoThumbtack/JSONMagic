@@ -44,6 +44,9 @@ class SearchResultsItem : Mappable {
         })
         
         type <- (map["type"], typeTransform)
+        
+        //or just do this
+        //type <- map["type"]
     }
     
     private func parseData(map: Map, type: SearchResultsItemType) {
