@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		465CF44B56BFC01286806FB5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D772A9AE4031069C9963B1D4 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		465CF44B56BFC01286806FB5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D772A9AE4031069C9963B1D4 /* Pods.framework */; };
+		A0049F8B1C75F089009571A0 /* ArgoAdventurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0049F8A1C75F089009571A0 /* ArgoAdventurer.swift */; };
+		A0049F8F1C75F1C4009571A0 /* adventurer.json in Resources */ = {isa = PBXBuildFile; fileRef = A0049F8E1C75F1C4009571A0 /* adventurer.json */; };
 		A09E0DD01C7303300004923A /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E0DCF1C7303300004923A /* Party.swift */; };
 		A09E0DD31C7317640004923A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E0DD21C7317640004923A /* UIColorExtension.swift */; };
 		A09E0DD51C7317C60004923A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E0DD41C7317C60004923A /* StringExtension.swift */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		05E0B276ECEBBCFC67214505 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		52161771DEA7F19CA05B1FCF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A0049F8A1C75F089009571A0 /* ArgoAdventurer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgoAdventurer.swift; path = Model/ArgoAdventurer.swift; sourceTree = "<group>"; };
+		A0049F8E1C75F1C4009571A0 /* adventurer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = adventurer.json; path = Resources/adventurer.json; sourceTree = "<group>"; };
 		A09E0DCF1C7303300004923A /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Party.swift; path = Model/Party.swift; sourceTree = "<group>"; };
 		A09E0DD21C7317640004923A /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Utils/UIColorExtension.swift; sourceTree = "<group>"; };
 		A09E0DD41C7317C60004923A /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Utils/StringExtension.swift; sourceTree = "<group>"; };
@@ -65,6 +69,26 @@
 				D772A9AE4031069C9963B1D4 /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0049F881C75F024009571A0 /* ObjectMapper */ = {
+			isa = PBXGroup;
+			children = (
+				A09E0DDC1C7331A50004923A /* SearchResults.swift */,
+				A09E0DD81C73222A0004923A /* SearchResultsItem.swift */,
+				A09E0DCF1C7303300004923A /* Party.swift */,
+				A0D71F301C71E8E2005C6F1C /* Adventurer.swift */,
+				A09E0DDA1C732BEB0004923A /* Category.swift */,
+			);
+			name = ObjectMapper;
+			sourceTree = "<group>";
+		};
+		A0049F891C75F02F009571A0 /* Argo */ = {
+			isa = PBXGroup;
+			children = (
+				A0049F8A1C75F089009571A0 /* ArgoAdventurer.swift */,
+			);
+			name = Argo;
 			sourceTree = "<group>";
 		};
 		A09E0DD11C7317590004923A /* Utils */ = {
@@ -116,6 +140,7 @@
 			children = (
 				A0D71F2A1C71DCB0005C6F1C /* party.json */,
 				A09E0DD61C7320260004923A /* search.json */,
+				A0049F8E1C75F1C4009571A0 /* adventurer.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -123,11 +148,8 @@
 		A0D71F2C1C71E206005C6F1C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A09E0DDC1C7331A50004923A /* SearchResults.swift */,
-				A09E0DD81C73222A0004923A /* SearchResultsItem.swift */,
-				A09E0DCF1C7303300004923A /* Party.swift */,
-				A0D71F301C71E8E2005C6F1C /* Adventurer.swift */,
-				A09E0DDA1C732BEB0004923A /* Category.swift */,
+				A0049F891C75F02F009571A0 /* Argo */,
+				A0049F881C75F024009571A0 /* ObjectMapper */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -203,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0D71F2B1C71DCB0005C6F1C /* party.json in Resources */,
+				A0049F8F1C75F1C4009571A0 /* adventurer.json in Resources */,
 				A0D71F1A1C71C01C005C6F1C /* LaunchScreen.storyboard in Resources */,
 				A09E0DD71C7320260004923A /* search.json in Resources */,
 				A0D71F171C71C01C005C6F1C /* Assets.xcassets in Resources */,
@@ -269,6 +292,7 @@
 				A0D71F121C71C01C005C6F1C /* ViewController.swift in Sources */,
 				A09E0DD51C7317C60004923A /* StringExtension.swift in Sources */,
 				A09E0DD31C7317640004923A /* UIColorExtension.swift in Sources */,
+				A0049F8B1C75F089009571A0 /* ArgoAdventurer.swift in Sources */,
 				A09E0DD01C7303300004923A /* Party.swift in Sources */,
 				A09E0DD91C73222A0004923A /* SearchResultsItem.swift in Sources */,
 				A0D71F101C71C01C005C6F1C /* AppDelegate.swift in Sources */,

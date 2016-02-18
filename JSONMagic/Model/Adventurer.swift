@@ -19,7 +19,7 @@ class Adventurer : Mappable {
     var beardColor: UIColor?
     var shoeSize: NSInteger?
     
-    //MARK: - Mappable protocol methods
+    //MARK: - ObjectMapper.Mappable protocol methods
     
     required init?(_ map: Map) {
         
@@ -36,7 +36,7 @@ class Adventurer : Mappable {
         parseBeardColor(map)
     }
     
-    //MARK: -
+    //MARK: - ObjectMapper parsing methods
     
     private func parseBirthday(map: Map) {
         let dateFormatter = NSDateFormatter()
