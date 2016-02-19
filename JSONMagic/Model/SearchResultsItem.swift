@@ -9,7 +9,9 @@
 import Foundation
 import ObjectMapper
 
-enum SearchResultsItemType : String {
+import Argo
+
+enum SearchResultsItemType : String, Decodable {
     case Category = "category"
     case Party = "party"
     case Adventurer = "adventurer"
@@ -34,19 +36,7 @@ class SearchResultsItem : Mappable {
     //MARK: - 
     
     private func parseType(map: Map) {
-        let typeTransform = TransformOf<SearchResultsItemType, String>(fromJSON: { (value: String?) -> SearchResultsItemType? in
-            if let string = value {
-                return SearchResultsItemType(rawValue: string)
-            }
-            return nil
-            }, toJSON: { (value: SearchResultsItemType?) -> String? in
-                return value?.rawValue
-        })
-        
-        type <- (map["type"], typeTransform)
-        
-        //or just do this
-        //type <- map["type"]
+        type <- map["type"]
     }
     
     private func parseData(map: Map, type: SearchResultsItemType) {
