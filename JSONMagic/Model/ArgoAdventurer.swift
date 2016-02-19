@@ -11,38 +11,6 @@ import Foundation
 import Argo
 import Curry
 
-//import Runes
-
-//TODO: remove DecodableDateWrapper. We don't need this wrapper anymore!
-class DecodableDateWrapper : Decodable {
-    var date: NSDate
-    
-    init(date: NSDate) {
-        self.date = date
-    }
-    
-    static func decode(j: JSON) -> Decoded<DecodableDateWrapper> {
-        switch j {
-        case let .String(s):
-            if let date = jsonDateFormatter().dateFromString(s) {
-                let wrapper = DecodableDateWrapper(date: date)
-                return pure(wrapper)
-            }
-            else {
-                return .Failure(DecodeError.Custom("Incorrect date format"))
-            }
-            
-        default: return .Failure(DecodeError.Custom("Incorrect date format"))
-        }
-    }
-    
-    static func jsonDateFormatter() -> NSDateFormatter {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        return dateFormatter
-    }
-}
-
 struct ArgoAdventurer : Decodable {
     var id: NSInteger
     var firstName: String

@@ -10,6 +10,10 @@
 		465CF44B56BFC01286806FB5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D772A9AE4031069C9963B1D4 /* Pods.framework */; };
 		A0049F8B1C75F089009571A0 /* ArgoAdventurer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0049F8A1C75F089009571A0 /* ArgoAdventurer.swift */; };
 		A0049F8F1C75F1C4009571A0 /* adventurer.json in Resources */ = {isa = PBXBuildFile; fileRef = A0049F8E1C75F1C4009571A0 /* adventurer.json */; };
+		A0049F911C773A7D009571A0 /* ArgoParty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0049F901C773A7D009571A0 /* ArgoParty.swift */; };
+		A0049F931C773F13009571A0 /* ArgoSearchResultsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0049F921C773F13009571A0 /* ArgoSearchResultsItem.swift */; };
+		A0049F951C7747A3009571A0 /* ArgoSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0049F941C7747A3009571A0 /* ArgoSearchResults.swift */; };
+		A0049F971C77483F009571A0 /* ArgoCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0049F961C77483F009571A0 /* ArgoCategory.swift */; };
 		A09E0DD01C7303300004923A /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E0DCF1C7303300004923A /* Party.swift */; };
 		A09E0DD31C7317640004923A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E0DD21C7317640004923A /* UIColorExtension.swift */; };
 		A09E0DD51C7317C60004923A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E0DD41C7317C60004923A /* StringExtension.swift */; };
@@ -31,6 +35,10 @@
 		52161771DEA7F19CA05B1FCF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A0049F8A1C75F089009571A0 /* ArgoAdventurer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgoAdventurer.swift; path = Model/ArgoAdventurer.swift; sourceTree = "<group>"; };
 		A0049F8E1C75F1C4009571A0 /* adventurer.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = adventurer.json; path = Resources/adventurer.json; sourceTree = "<group>"; };
+		A0049F901C773A7D009571A0 /* ArgoParty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgoParty.swift; path = Model/ArgoParty.swift; sourceTree = "<group>"; };
+		A0049F921C773F13009571A0 /* ArgoSearchResultsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgoSearchResultsItem.swift; path = Model/ArgoSearchResultsItem.swift; sourceTree = "<group>"; };
+		A0049F941C7747A3009571A0 /* ArgoSearchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgoSearchResults.swift; path = Model/ArgoSearchResults.swift; sourceTree = "<group>"; };
+		A0049F961C77483F009571A0 /* ArgoCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgoCategory.swift; path = Model/ArgoCategory.swift; sourceTree = "<group>"; };
 		A09E0DCF1C7303300004923A /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Party.swift; path = Model/Party.swift; sourceTree = "<group>"; };
 		A09E0DD21C7317640004923A /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Utils/UIColorExtension.swift; sourceTree = "<group>"; };
 		A09E0DD41C7317C60004923A /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Utils/StringExtension.swift; sourceTree = "<group>"; };
@@ -86,7 +94,11 @@
 		A0049F891C75F02F009571A0 /* Argo */ = {
 			isa = PBXGroup;
 			children = (
+				A0049F941C7747A3009571A0 /* ArgoSearchResults.swift */,
+				A0049F921C773F13009571A0 /* ArgoSearchResultsItem.swift */,
+				A0049F901C773A7D009571A0 /* ArgoParty.swift */,
 				A0049F8A1C75F089009571A0 /* ArgoAdventurer.swift */,
+				A0049F961C77483F009571A0 /* ArgoCategory.swift */,
 			);
 			name = Argo;
 			sourceTree = "<group>";
@@ -290,12 +302,16 @@
 			files = (
 				A0D71F311C71E8E2005C6F1C /* Adventurer.swift in Sources */,
 				A0D71F121C71C01C005C6F1C /* ViewController.swift in Sources */,
+				A0049F971C77483F009571A0 /* ArgoCategory.swift in Sources */,
 				A09E0DD51C7317C60004923A /* StringExtension.swift in Sources */,
 				A09E0DD31C7317640004923A /* UIColorExtension.swift in Sources */,
 				A0049F8B1C75F089009571A0 /* ArgoAdventurer.swift in Sources */,
 				A09E0DD01C7303300004923A /* Party.swift in Sources */,
+				A0049F931C773F13009571A0 /* ArgoSearchResultsItem.swift in Sources */,
+				A0049F951C7747A3009571A0 /* ArgoSearchResults.swift in Sources */,
 				A09E0DD91C73222A0004923A /* SearchResultsItem.swift in Sources */,
 				A0D71F101C71C01C005C6F1C /* AppDelegate.swift in Sources */,
+				A0049F911C773A7D009571A0 /* ArgoParty.swift in Sources */,
 				A09E0DDD1C7331A50004923A /* SearchResults.swift in Sources */,
 				A09E0DDB1C732BEB0004923A /* Category.swift in Sources */,
 			);
