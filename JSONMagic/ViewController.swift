@@ -1,4 +1,4 @@
-//
+////
 //  ViewController.swift
 //  JSONMagic
 //
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
                 let json: AnyObject? = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
                 if let j: AnyObject = json {
                     let adventurer: ArgoAdventurer? = decode(j)
-                     print(adventurer)
+                    print(adventurer)
                 }
             }
         }
