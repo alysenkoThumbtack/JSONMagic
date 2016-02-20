@@ -17,10 +17,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         if let JSONString = loadJSON("search.json") {
+            let search = Mapper<SearchResults>().map(JSONString)
+            let json = search?.toJSONString(true)
+            print(json)
+        }
+        
+        if let JSONString = loadJSON("search.json") {
             if let data = (JSONString as NSString).dataUsingEncoding(NSUTF8StringEncoding) {
                 let json: AnyObject? = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
                 if let j: AnyObject = json {
-
                     let search: ArgoSearchResults? = decode(j)
                     print(search)
                 }
