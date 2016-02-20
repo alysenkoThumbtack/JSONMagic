@@ -33,21 +33,42 @@ class SearchResultsItem : Mappable {
         parseData(map, type: self.type)
     }
     
-    //MARK: - 
+    //MARK: -
     
     private func parseType(map: Map) {
         type <- map["type"]
     }
     
     private func parseData(map: Map, type: SearchResultsItemType) {
-        let jsonDict = map["data"].currentValue
-        switch (type) {
-        case .Category:
-            data = Mapper<Category>().map(jsonDict)
-        case .Adventurer:
-            data = Mapper<Adventurer>().map(jsonDict)
-        case .Party:
-            data = Mapper<Party>().map(jsonDict)
+        let transform = TransformOf(fromJSON: { (json: [String : AnyObject]?) -> AnyObject? in
+            if let jsonDict = json {
+                switch (type) {
+                case .Category:
+                    return Mapper<Category>().map(jsonDict)
+                case .Adventurer:
+                    return Mapper<Adventurer>().map(jsonDict)
+                case .Party:
+                    return Mapper<Party>().map(jsonDict)
+                }
+            }
+            
+            return nil
+            
+            }) { (object: AnyObject?) -> [String : AnyObject]? in
+                if let obj = object {
+                    switch (type) {
+                    case .Category:
+                        return Mapper<Category>().toJSON(obj as! Category)
+                    case .Adventurer:
+                        return Mapper<Adventurer>().toJSON(obj as! Adventurer)
+                    case .Party:
+                        return Mapper<Party>().toJSON(obj as! Party)
+                    }
+                }
+                
+                return nil
         }
+        
+        data <- (map["data"], transform)
     }
 }
