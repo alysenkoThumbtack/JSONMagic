@@ -10,6 +10,7 @@ import Foundation
 
 import Argo
 import Curry
+import SwiftyJSON
 
 struct ArgoAdventurer : Decodable {
     var id: NSInteger
@@ -25,7 +26,7 @@ struct ArgoAdventurer : Decodable {
     
     //TODO: read about complex data types: https://github.com/thoughtbot/Argo/issues/131
     
-    static func decode(j: JSON) -> Decoded<ArgoAdventurer> {
+    static func decode(j: Argo.JSON) -> Decoded<ArgoAdventurer> {
         return curry(ArgoAdventurer.init)
             <^> j <| "id"
             <*> j <| "first_name"

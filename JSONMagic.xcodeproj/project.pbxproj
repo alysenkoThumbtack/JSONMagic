@@ -14,6 +14,8 @@
 		A0049F931C773F13009571A0 /* ArgoSearchResultsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0049F921C773F13009571A0 /* ArgoSearchResultsItem.swift */; };
 		A0049F951C7747A3009571A0 /* ArgoSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0049F941C7747A3009571A0 /* ArgoSearchResults.swift */; };
 		A0049F971C77483F009571A0 /* ArgoCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0049F961C77483F009571A0 /* ArgoCategory.swift */; };
+		A06B74371C7D959B009EA44E /* dvarfs.json in Resources */ = {isa = PBXBuildFile; fileRef = A06B74361C7D959B009EA44E /* dvarfs.json */; };
+		A06B74391C7D95DA009EA44E /* hobbits.json in Resources */ = {isa = PBXBuildFile; fileRef = A06B74381C7D95DA009EA44E /* hobbits.json */; };
 		A09E0DD01C7303300004923A /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E0DCF1C7303300004923A /* Party.swift */; };
 		A09E0DD31C7317640004923A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E0DD21C7317640004923A /* UIColorExtension.swift */; };
 		A09E0DD51C7317C60004923A /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E0DD41C7317C60004923A /* StringExtension.swift */; };
@@ -39,6 +41,8 @@
 		A0049F921C773F13009571A0 /* ArgoSearchResultsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgoSearchResultsItem.swift; path = Model/ArgoSearchResultsItem.swift; sourceTree = "<group>"; };
 		A0049F941C7747A3009571A0 /* ArgoSearchResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgoSearchResults.swift; path = Model/ArgoSearchResults.swift; sourceTree = "<group>"; };
 		A0049F961C77483F009571A0 /* ArgoCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArgoCategory.swift; path = Model/ArgoCategory.swift; sourceTree = "<group>"; };
+		A06B74361C7D959B009EA44E /* dvarfs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = dvarfs.json; path = Resources/dvarfs.json; sourceTree = "<group>"; };
+		A06B74381C7D95DA009EA44E /* hobbits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = hobbits.json; path = Resources/hobbits.json; sourceTree = "<group>"; };
 		A09E0DCF1C7303300004923A /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Party.swift; path = Model/Party.swift; sourceTree = "<group>"; };
 		A09E0DD21C7317640004923A /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Utils/UIColorExtension.swift; sourceTree = "<group>"; };
 		A09E0DD41C7317C60004923A /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Utils/StringExtension.swift; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 				A0D71F2A1C71DCB0005C6F1C /* party.json */,
 				A09E0DD61C7320260004923A /* search.json */,
 				A0049F8E1C75F1C4009571A0 /* adventurer.json */,
+				A06B74361C7D959B009EA44E /* dvarfs.json */,
+				A06B74381C7D95DA009EA44E /* hobbits.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -236,7 +242,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A06B74371C7D959B009EA44E /* dvarfs.json in Resources */,
 				A0D71F2B1C71DCB0005C6F1C /* party.json in Resources */,
+				A06B74391C7D95DA009EA44E /* hobbits.json in Resources */,
 				A0049F8F1C75F1C4009571A0 /* adventurer.json in Resources */,
 				A0D71F1A1C71C01C005C6F1C /* LaunchScreen.storyboard in Resources */,
 				A09E0DD71C7320260004923A /* search.json in Resources */,
