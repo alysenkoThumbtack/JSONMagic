@@ -1,0 +1,17 @@
+{
+    "date" : "2890-09-22",
+    "dvarfs" : [
+                 {
+                 "id" : 1,
+                 "first_name" : "Killi",
+                 "beard_color" : "#f7f7f7",
+                 "shoe_size" : 43
+                 },
+                 {
+                 "id" : 2,
+                 "first_name" : "Filli",
+                 "beard_color" : "#cccccc",
+                 "shoe_size" : 42
+                 }
+                 ]
+}
