@@ -27,13 +27,26 @@ struct ArgoAdventurer : Decodable {
     //TODO: read about complex data types: https://github.com/thoughtbot/Argo/issues/131
     
     static func decode(j: Argo.JSON) -> Decoded<ArgoAdventurer> {
-        return curry(ArgoAdventurer.init)
+        let parser = curry(ArgoAdventurer.init)
             <^> j <| "id"
             <*> j <| "first_name"
             <*> j <|? "last_name"
-            <*> ((j <|? ["memorable_days", "birthday"]) >>- toNSDate)
+        
+        let dateString: Decoded<String?> = (j <|? ["memorable_days", "birthday"])
+        let date = dateString.flatMap(toNSDate)
+        
+        return parser
+            <*> date
             <*> j <|? "shoe_size"
             <*> ((j <|? "beard_color") >>- toUIColor)
+        
+//        return curry(ArgoAdventurer.init)
+//            <^> j <| "id"
+//            <*> j <| "first_name"
+//            <*> j <|? "last_name"
+//            <*> ((j <|? ["memorable_days", "birthday"]) >>- toNSDate)
+//            <*> j <|? "shoe_size"
+//            <*> ((j <|? "beard_color") >>- toUIColor)
     }
     
     //MARK: - NSDate parsing methods
