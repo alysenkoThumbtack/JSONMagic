@@ -18,5 +18,5 @@ Here you can find examples of usage of [ObjectMapper](https://github.com/Hearst-
   * Stage 7: ObjectMapper - correct parsing of complex objects (toJSON, fromJSON works correct)
 - SwiftyJSON
   * Stage 8: simple SwiftyJSON example
--Argo
+- Argo
   * Stage 9: split parsing on several parts (Argo)
